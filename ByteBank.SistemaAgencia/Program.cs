@@ -28,10 +28,12 @@ namespace ByteBank.SistemaAgencia
             lista.Adicionar(new ContaCorrente(874, 5679787));
             lista.Adicionar(new ContaCorrente(874, 5679787));
 
-            lista.EscreverListaNaTela();
-            lista.Remover(contaDoGui);
-            Console.WriteLine("Após remover o item!");
-            lista.EscreverListaNaTela();
+            for (int i = 0; i < lista.Tamanho; i++)
+            {                
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = conta{itemAtual.Numero} / agencia{itemAtual.Agencia}");
+            }
+
 
             Console.ReadLine();
         }
@@ -63,9 +65,9 @@ namespace ByteBank.SistemaAgencia
             idades[0] = 15;
             idades[1] = 28;
             idades[2] = 35;
-            idades[3] = 50;
-            idades[4] = 22;
-            idades[5] = 60;
+            //idades[3] = 50;
+            //idades[4] = 22;
+            //idades[5] = 60;
 
             Console.WriteLine(idades.Length);
 
